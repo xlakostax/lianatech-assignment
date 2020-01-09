@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 import axios from 'axios';
 import Modal from 'react-modal';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
   padding: 0 10% 4em 10%;
   background-color: rgb(255,255,255);
   border-top: 1px rgb(235, 235, 235) solid;
@@ -24,25 +23,46 @@ const Section = styled.section`
     font-weight: 200;
     text-align: center;
     padding-bottom: 2em;
+    @media (max-width: 768px) {
+      width: 45%;
+    }
+    @media (max-width: 425px) {
+      width: 65%;
+    }
   }
 `;
 
 const Form = styled.form`
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    gap: 1em;
+    width: 100%;
+  }
+  @media (max-width: 435px) {
+    grid-template-columns: 1fr;
+  }
   & input {
     height: 2em;
     border-radius: 4px 4px;
     font-size: 1.2em;
     font-weight: 400;
     outline: none;
+    @media (max-width: 768px) {
+      font-size: 1em;
+    }
   }
   & input:first-child {
-    margin-right: 0.5em;
     width: 30em;
+    /* margin-right: 0.5em; */
+    padding: 0 1em;
     border: 1px rgb(235, 235, 235) solid;
-    padding-left: 20px;
+    @media (max-width: 1024px) {
+      width: auto;
+    }
   }
   & input:last-child {
-    padding: 0 1em;
+    /* padding: 0 1em; */
     border: 1px rgb(76, 137, 48) solid;
     background-color: rgb(76, 137, 48);
     color: rgb(255, 255, 255);

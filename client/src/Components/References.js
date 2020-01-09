@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -15,7 +14,7 @@ const Section = styled.section`
   }
   & .inner-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(263px, auto));
     gap: 1em;
   }
   & .card-inGrid {
@@ -65,9 +64,9 @@ const References = () => {
   const referencesList = referencesData.map( (grid) => {
     return(
         <div className = 'card-inGrid' key = { grid.id }>
-        <a href = { grid.url } target = '_blank'>
+        <a href = { grid.url } target = '_blank' rel="noopener noreferrer">
           <div className = 'company-logo'>
-            <img src = {grid.img} />
+            <img src = {grid.img} alt = { grid.title } />
           </div>
           <div className = 'company-info'>
             <p className = 'title'>{ grid.title }</p>

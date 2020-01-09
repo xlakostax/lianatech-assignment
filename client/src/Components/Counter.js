@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -88,7 +87,6 @@ export default class Counter extends Component {
             </p>
           </div>
         </div>
-
         <div className = 'card'>
           <div>
             <i className = 'far fa-smile'></i>

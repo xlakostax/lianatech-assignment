@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import styled from 'styled-components';
 
 import Counter from '../Components/Counter';
@@ -18,11 +17,15 @@ const Main = styled.main`
   }
   & .banner p {
     display: block;
+    margin-bottom: 0.8em;
+    padding: 0 1em;
     color: rgb(255, 255, 255);
     font-weight: 100;
     font-size: 4.6em;
     text-align: center;
-    margin-bottom: 0.8em;
+    @media (max-width: 425px) {
+      font-size: 2.2em;
+    }
   }
   & .banner button {
     /* width: 7em; */
@@ -53,4 +56,4 @@ const Home = () => {
     </Main>
   );
 }
-export default Home
+export default Home;

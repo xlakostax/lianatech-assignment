@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -17,7 +16,6 @@ const Section = styled.section`
   & .inner-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    /* grid-template-rows: repeat(auto, 4.5em); */
     gap: 1em;
   }
   & .card-inGrid {
@@ -81,7 +79,7 @@ export default class RSS extends Component {
             let yyyy = date.getFullYear();
             date = dd + '.' + mm + '.' + yyyy
             return (
-              <a href = { list.url } target = '_blank' key = { list.url } >
+              <a href = { list.url } target = '_blank' rel='noopener noreferrer' key = { list.url } >
                 <div className = 'card-inGrid' key = { list.title }>
                   <p className = 'date'>{ date }</p>
                   <p className = 'title'>{ list.title }</p>

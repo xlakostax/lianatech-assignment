@@ -3,10 +3,28 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 1024px) {
+    width: 100%
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%
+    justify-content: space-between;
+    padding-bottom: 2em;
+  }
   paddingLeft: 10%;
   & ul {
     padding-inline-start: 0;
     color: rgb(128,128,128);
+  }
+  & ul:last-child {
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
   & ul li {
     display: inline-block;
@@ -41,14 +59,16 @@ const Navbar = () => {
 
   return (
     <Nav>
+    <ul>
+      <li>
+        <NavLink exact to =  '/'>
+          <div>
+            <img src = '../Images/logo.png' alt = 'Liana Technologies logo'/>
+          </div>
+        </NavLink>
+      </li>
+    </ul>
       <ul>
-        <li>
-          <NavLink exact to =  '/'>
-            <div>
-              <img src = '../Images/logo.png' />
-            </div>
-          </NavLink>
-        </li>
         {linksList}
       </ul>
     </Nav>

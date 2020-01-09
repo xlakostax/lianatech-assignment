@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Navbar from './Navbar';
@@ -20,10 +19,16 @@ const HeaderCmp = styled.header`
   }
   & .bottomArea {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 255, 255);
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
+
+
 `;
 
 const Header = () => {

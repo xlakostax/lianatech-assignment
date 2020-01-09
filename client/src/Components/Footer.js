@@ -1,18 +1,17 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const FooterCmp = styled.footer`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  width: 80%;
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, auto));
+  width: 80%;
   padding: 1em 10% 4em 10%;
   color: rgb(255,255,255);
   background-color: rgb(0,0,0);
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
   & ul {
     padding-inline-start: 0;
   }
@@ -20,9 +19,26 @@ const FooterCmp = styled.footer`
     display: inline-block;
     vertical-align: middle;
     padding-left: 1em;
+    @media (max-width: 1024px) {
+      padding-left: 0;
+    }
   }
   & ul li:first-child {
     padding-left: 0;
+  }
+  & .contact-us {
+    position: relative;
+    display: flex;
+    @media (max-width: 430px) {
+      display: grid;
+    }
+    @media (min-width: 431px) and (max-width: 768px) {
+      justify-content: space-between;
+    }
+    @media (max-width: 1024px) {
+      align-items: center;
+      padding-bottom: 2em;
+    }
   }
   & button {
     height: 2.1em;
@@ -36,6 +52,9 @@ const FooterCmp = styled.footer`
     border-radius: 4px 4px;
     outline: none;
     cursor: pointer;
+    @media (max-width: 430px) {
+      margin: 1em 0 0;
+    }
   }
   & .social--media-wrapper {
     display: flex;
@@ -43,6 +62,7 @@ const FooterCmp = styled.footer`
     width: 100%;
     margin: auto 0em 0.2em 0;
     text-align: right;
+
   }
   & .social--media {
     display: flex;
@@ -60,21 +80,33 @@ const FooterCmp = styled.footer`
 
 `;
 
-const Nav = styled.nav`
-  padding-bottom: 1em;
-  & .nav {
-    text-align: right;
-    /* font-size: 0.8em; */
-  }
-  & .nav li {
-    padding-top: 0.4em;
-  }
-`;
-
 const Brand = styled.div`
   padding-bottom: 2em;
   & .brand-name li:first-child {
     font-size: 1.2em;
+  }
+`;
+
+const Nav = styled.nav`
+  padding-bottom: 1em;
+  @media (max-width: 1024px) {
+    padding-bottom: 2em;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+  & .nav {
+    width: 100%;
+    text-align: right;
+    @media (max-width: 1024px) {
+      text-align: justify;
+    }
+  }
+  & .nav li {
+    padding-top: 0.4em;
+    @media (max-width: 1024px) {
+      width: 20%;
+    }
   }
 `;
 
@@ -105,7 +137,7 @@ const Footer = () => {
           {linksList}
         </ul>
       </Nav>
-      <div style = {{display: 'flex'}}>
+      <div className = 'contact-us'>
         <div>
           <p style = {{ fontWeight: 600 }}>Sales and inquiries</p>
           <p style = {{ fontWeight: 200 }}>Email: sales@lianatech.com</p>
@@ -114,9 +146,9 @@ const Footer = () => {
         <button>Contact us</button>
       </div>
       <div className = 'social--media-wrapper'>
-        <div className = 'social--media'><i class="fab fa-linkedin-in"></i></div>
-        <div className = 'social--media'><i class="fab fa-twitter"></i></div>
-        <div className = 'social--media'><i class="fab fa-facebook-f"></i></div>
+        <div className = 'social--media'><i className = 'fab fa-linkedin-in'></i></div>
+        <div className = 'social--media'><i className = 'fab fa-twitter'></i></div>
+        <div className = 'social--media'><i className = 'fab fa-facebook-f'></i></div>
       </div>
     </FooterCmp>
   )

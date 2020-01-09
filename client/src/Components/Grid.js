@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Section = styled.section`
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(263px, auto));
   gap: 2vw;
   padding: 4em 10%;
   background-color: white;

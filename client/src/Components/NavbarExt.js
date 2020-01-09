@@ -19,6 +19,12 @@ const Nav = styled.nav`
   & ul li:last-child {
     padding-right: 0;
   }
+  & .language-choose {
+    display: none;
+    @media (max-width: 375px) {
+      display: inline-block;
+    }
+  }
 `;
 
 const NavbarExt = () => {
@@ -39,6 +45,7 @@ const NavbarExt = () => {
         <li>
           <Language />
         </li>
+
       </ul>
     </Nav>
   )
