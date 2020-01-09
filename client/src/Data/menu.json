@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Company",
+    "path": "/company"
+  },
+  {
+    "id": 2,
+    "title": "Products",
+    "path": "/products"
+  },
+  {
+    "id": 3,
+    "title": "Contacts",
+    "path": "/contacts"
+  },
+  {
+    "id": 4,
+    "title": "News",
+    "path": "/news"
+  },
+  {
+    "id": 5,
+    "title": "Intranet",
+    "path": "/intranet"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Robert Bosch",
+    "url": "https://www.bosch.fi/",
+    "img": "../Images/logo-bosch.png",
+    "description": "Bosch is a multinational engineering and electronics company."
+  },
+  {
+    "id": 2,
+    "title": "The Body Shop",
+    "url": "https://www.thebodyshop.fi/",
+    "img": "../Images/logo-thebodyshop.png",
+    "description": "The Body Shop is a global beauty brand and it has more than 3,000 stores in more than 60 countries."
+  },
+  {
+    "id": 3,
+    "title": "Lapland Hotels",
+    "url": "https://www.laplandhotels.com/",
+    "img": "../Images/logo-laplandhotels.png",
+    "description": "Lapland Hotels is the largest and the most diverse hotel chain in Lapland. "
+  },
+  {
+    "id": 4,
+    "title": "IKEA",
+    "url": "https://www.ikea.com/",
+    "img": "../Images/logo-ikea.png",
+    "description": "IKEA is a multinational furniture store."
+  }
+]
